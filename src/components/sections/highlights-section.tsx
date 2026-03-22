@@ -68,13 +68,20 @@ const OFFERINGS = [
 ];
 
 export default function HighlightsSection() {
-  const { ref, isVisible } = useScrollReveal();
+  const { ref: headerRef, isVisible: headerVisible } = useScrollReveal(0.2);
+  const { ref: gridRef, isVisible: gridVisible } = useScrollReveal(0.1);
 
   return (
     <section className="bg-white py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header — editorial style */}
-        <div className="mb-16 md:mb-20">
+        {/* Section Header — editorial style with own reveal */}
+        <div
+          ref={headerRef}
+          className={cn(
+            "mb-16 md:mb-20 transition-all duration-700",
+            headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+          )}
+        >
           <div className="flex items-center gap-3 mb-5">
             <span className="h-px w-8 bg-forge-red" />
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-forge-red">
@@ -91,12 +98,12 @@ export default function HighlightsSection() {
           </p>
         </div>
 
-        {/* Offerings Grid — editorial layout */}
+        {/* Offerings Grid — editorial layout with staggered reveal */}
         <div
-          ref={ref}
+          ref={gridRef}
           className={cn(
             "transition-all duration-700",
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            gridVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           )}
         >
           {/* Top divider */}
@@ -104,56 +111,61 @@ export default function HighlightsSection() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {OFFERINGS.map((item, index) => {
-              /* Column position for border logic */
-              const lgCol = index % 3; // 0, 1, 2
-              const lgRow = Math.floor(index / 3); // 0, 1
+              const lgCol = index % 3;
+              const lgRow = Math.floor(index / 3);
               const smCol = index % 2;
               const isLastLgRow = lgRow === 1;
               const isLastSmRow = index >= 4;
 
               return (
-              <div
-                key={item.title}
-                className={cn(
-                  "group relative py-10 px-6 lg:px-8 transition-all duration-300",
-                  /* Mobile: all except last get bottom border */
-                  index < 5 && "border-b border-gray-200",
-                  /* Tablet: vertical divider on right column */
-                  smCol === 1 && "sm:border-l sm:border-gray-200",
-                  /* Tablet: remove bottom border on last row */
-                  isLastSmRow && "sm:border-b-0",
-                  /* Desktop: reset tablet borders, add column dividers */
-                  "lg:border-l-0",
-                  lgCol === 1 && "lg:!border-l lg:border-gray-200",
-                  lgCol === 2 && "lg:!border-l lg:border-gray-200",
-                  /* Desktop: only first row gets bottom border */
-                  isLastLgRow ? "lg:!border-b-0" : "lg:!border-b lg:border-gray-200"
-                )}
-                style={{ transitionDelay: `${index * 60}ms` }}
-              >
-                {/* Number + Icon row */}
-                <div className="flex items-start justify-between mb-6">
-                  <span className="text-[11px] font-semibold tracking-widest text-gray-300 select-none">
-                    {item.number}
-                  </span>
-                  <div className="text-forge-red transition-transform duration-300 group-hover:scale-110">
-                    {item.icon}
+                <div
+                  key={item.title}
+                  className={cn(
+                    "group relative py-10 px-6 lg:px-8 transition-all duration-500",
+                    /* Hover: subtle background tint */
+                    "hover:bg-gray-50/80",
+                    /* Mobile: all except last get bottom border */
+                    index < 5 && "border-b border-gray-200",
+                    /* Tablet: vertical divider on right column */
+                    smCol === 1 && "sm:border-l sm:border-gray-200",
+                    /* Tablet: remove bottom border on last row */
+                    isLastSmRow && "sm:border-b-0",
+                    /* Desktop: reset tablet borders, add column dividers */
+                    "lg:border-l-0",
+                    lgCol === 1 && "lg:!border-l lg:border-gray-200",
+                    lgCol === 2 && "lg:!border-l lg:border-gray-200",
+                    /* Desktop: only first row gets bottom border */
+                    isLastLgRow ? "lg:!border-b-0" : "lg:!border-b lg:border-gray-200"
+                  )}
+                  style={{
+                    transitionDelay: gridVisible ? `${index * 80}ms` : "0ms",
+                    opacity: gridVisible ? 1 : 0,
+                    transform: gridVisible ? "translateY(0)" : "translateY(12px)",
+                  }}
+                >
+                  {/* Number + Icon row */}
+                  <div className="flex items-start justify-between mb-6">
+                    <span className="text-[11px] font-semibold tracking-widest text-gray-300 select-none">
+                      {item.number}
+                    </span>
+                    <div className="text-forge-red transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-0.5">
+                      {item.icon}
+                    </div>
                   </div>
+
+                  {/* Red accent line */}
+                  <div className="mb-5 h-0.5 w-8 bg-forge-red transition-all duration-500 group-hover:w-16" />
+
+                  {/* Title */}
+                  <h3 className="text-base font-bold uppercase tracking-wide text-gray-900 transition-colors duration-300 group-hover:text-forge-red">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mt-3 text-sm leading-relaxed text-gray-500">
+                    {item.description}
+                  </p>
                 </div>
-
-                {/* Red accent line */}
-                <div className="mb-5 h-0.5 w-8 bg-forge-red transition-all duration-300 group-hover:w-14" />
-
-                {/* Title */}
-                <h3 className="text-base font-bold uppercase tracking-wide text-gray-900">
-                  {item.title}
-                </h3>
-
-                {/* Description */}
-                <p className="mt-3 text-sm leading-relaxed text-gray-500">
-                  {item.description}
-                </p>
-              </div>
               );
             })}
           </div>

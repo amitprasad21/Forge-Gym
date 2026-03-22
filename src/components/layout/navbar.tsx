@@ -9,12 +9,21 @@ import { cn } from "@/lib/utils";
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hasMounted, setHasMounted] = useState(false);
   const pathname = usePathname();
+
+  /* Mark component as mounted to prevent hydration mismatch */
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
+    /* Check initial scroll position on mount */
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -37,12 +46,19 @@ export default function Navbar() {
     };
   }, [isMobileMenuOpen]);
 
+  /*
+   * Use hasMounted to gate scroll-dependent styles.
+   * Server always renders "bg-transparent" (the initial state).
+   * After hydration, the client applies the correct style based on scroll pos.
+   */
+  const showScrolledStyle = hasMounted && isScrolled;
+
   return (
     <>
       <nav
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled
+          showScrolledStyle
             ? "bg-forge-black/95 backdrop-blur-md shadow-lg shadow-black/20 border-b border-forge-white/5"
             : "bg-transparent"
         )}
@@ -173,7 +189,7 @@ export default function Navbar() {
         {/* Mobile Nav Links */}
         <div className="flex-1 overflow-y-auto px-6 py-8">
           <div className="flex flex-col gap-2">
-            {NAV_LINKS.map((link, index) => {
+            {NAV_LINKS.map((link) => {
               const isActive =
                 pathname === link.href ||
                 (link.href !== "/" && pathname.startsWith(link.href));
@@ -189,9 +205,6 @@ export default function Navbar() {
                       ? "bg-forge-red/10 text-forge-red"
                       : "text-forge-white/70 hover:bg-forge-white/5 hover:text-forge-white"
                   )}
-                  style={{
-                    animationDelay: `${index * 50}ms`,
-                  }}
                 >
                   {isActive && (
                     <span className="h-1.5 w-1.5 rounded-full bg-forge-red" />

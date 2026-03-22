@@ -2,7 +2,7 @@ import HeroSection from "@/components/sections/hero-section";
 import HighlightsSection from "@/components/sections/highlights-section";
 import AboutPreviewSection from "@/components/sections/about-preview-section";
 import ProgramsPreviewSection from "@/components/sections/programs-preview-section";
-import WhyChooseSection from "@/components/sections/why-choose-section";
+import PricingSection from "@/components/sections/pricing-section";
 import TrainersPreviewSection from "@/components/sections/trainers-preview-section";
 import TestimonialsSection from "@/components/sections/testimonials-section";
 import GalleryPreviewSection from "@/components/sections/gallery-preview-section";
@@ -16,7 +16,7 @@ export default function HomePage() {
       <HighlightsSection />
       <AboutPreviewSection />
       <ProgramsPreviewSection />
-      <WhyChooseSection />
+      <PricingSection />
       <TrainersPreviewSection />
       <TestimonialsSection />
       <GalleryPreviewSection />
