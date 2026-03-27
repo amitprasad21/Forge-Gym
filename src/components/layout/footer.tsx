@@ -252,7 +252,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col items-center justify-between gap-4 border-t border-forge-white/5 py-8 sm:flex-row">
           <p className="text-sm text-forge-white/30">
-            &copy; 2024 The Forge Gym. All rights reserved.
+            &copy; 2026 The Forge Gym. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a
