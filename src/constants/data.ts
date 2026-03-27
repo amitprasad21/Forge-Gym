@@ -290,8 +290,8 @@ export const GALLERY_IMAGES = [
     category: "training",
   },
   {
-    src: "/images/gallery/personal-training.jpg",
-    alt: "Personal training session",
+    src: "/images/gallery/kettlebell-training.jpg",
+    alt: "Kettlebell training session",
     category: "training",
   },
   {
