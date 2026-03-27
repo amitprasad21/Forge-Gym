@@ -17,10 +17,10 @@ export const HERO_DATA = {
   backgroundImage: "/images/hero/hero-bg.jpg",
   athleteImage: "/images/hero/hero-athlete.jpg",
   stats: [
-    { value: "10K+", label: "Members Trained" },
+    { value: "500+", label: "Founding Members" },
     { value: "15+", label: "Expert Trainers" },
     { value: "50+", label: "Weekly Classes" },
-    { value: "8+", label: "Years Strong" },
+    { value: "2026", label: "Est. January" },
   ],
 };
 
@@ -61,7 +61,7 @@ export const ABOUT_PREVIEW = {
   tagline: "WHO WE ARE",
   title: "More Than a Gym.\nA Training Ground.",
   description:
-    "The Forge was built with one purpose: to create an environment where serious training happens. No gimmicks, no shortcuts — just raw dedication, expert coaching, and the tools you need to transform. Every piece of equipment, every program, and every trainer is here to help you become your strongest self.",
+    "Established in January 2026, The Forge was built with one purpose: to create an environment where serious training happens. No gimmicks, no shortcuts — just raw dedication, expert coaching, and the tools you need to transform.",
   image: "/images/gallery/gym-floor.jpg",
   features: [
     "10,000+ sq ft training floor",
@@ -136,47 +136,54 @@ export const PROGRAMS = [
 
 export const MEMBERSHIP_PLANS = [
   {
-    name: "Starter",
-    price: "29",
+    name: "1 Month",
+    price: "2,000",
     period: "month",
     description: "Perfect for beginners ready to start their fitness journey.",
     features: [
       "Full gym access",
       "Locker room access",
-      "2 group classes/week",
       "Fitness assessment",
       "Mobile app access",
     ],
     popular: false,
   },
   {
-    name: "Pro",
-    price: "59",
-    period: "month",
-    description: "For dedicated athletes who want unlimited access and coaching.",
+    name: "3 Months",
+    price: "4,500",
+    period: "3 months",
+    description: "Great value for dedicated individuals.",
     features: [
-      "Everything in Starter",
-      "Unlimited group classes",
+      "Everything in 1 Month",
       "1 PT session/month",
       "Nutrition consultation",
       "Priority booking",
-      "Guest passes (2/month)",
     ],
     popular: true,
   },
   {
-    name: "Elite",
-    price: "99",
-    period: "month",
-    description: "The ultimate package for total transformation and premium perks.",
+    name: "6 Months",
+    price: "7,000",
+    period: "6 months",
+    description: "Ideal for long-term consistency and visible results.",
     features: [
-      "Everything in Pro",
-      "4 PT sessions/month",
+      "Everything in 3 Months",
       "Custom meal plans",
       "Recovery zone access",
       "Exclusive workshops",
+    ],
+    popular: false,
+  },
+  {
+    name: "12 Months",
+    price: "12,000",
+    period: "12 months",
+    description: "The ultimate package for total transformation.",
+    features: [
+      "Everything in 6 Months",
       "Unlimited guest passes",
       "Premium merch quarterly",
+      "VIP locker access",
     ],
     popular: false,
   },
@@ -184,87 +191,84 @@ export const MEMBERSHIP_PLANS = [
 
 export const TRAINERS = [
   {
-    name: "Marcus Cole",
+    name: "Yash Rathod",
     role: "Head Strength Coach",
-    bio: "Former competitive powerlifter with 12 years of coaching experience. Marcus specializes in building raw strength and helping athletes break through plateaus.",
+    bio: "Passionate about transformations, Yash has helped hundreds of clients achieve goals they never thought possible. His holistic approach covers training, nutrition, and mindset.",
     specialties: ["Powerlifting", "Strength", "Athletic Performance"],
-    image: "/images/trainers/marcus-cole.jpg",
+    image: "/images/trainers/gymm.png",
     certifications: ["NSCA-CSCS", "USAW Level 2"],
   },
   {
-    name: "Sarah Chen",
-    role: "HIIT & Conditioning Specialist",
-    bio: "With a background in sports science and 8 years in fitness, Sarah designs high-intensity programs that deliver measurable results fast.",
-    specialties: ["HIIT", "Fat Loss", "Metabolic Conditioning"],
-    image: "/images/trainers/sarah-chen.jpg",
-    certifications: ["ACE-CPT", "Precision Nutrition L1"],
-  },
-  {
-    name: "James Rivera",
-    role: "Boxing & Combat Coach",
-    bio: "Professional boxing background with 10 years of coaching. James brings discipline, technique, and intensity to every session.",
-    specialties: ["Boxing", "Kickboxing", "Self-Defense"],
-    image: "/images/trainers/james-rivera.jpg",
-    certifications: ["USA Boxing Coach", "NASM-CPT"],
-  },
-  {
-    name: "Priya Sharma",
-    role: "Yoga & Mobility Coach",
-    bio: "500-hour certified yoga teacher who bridges the gap between intense training and mindful recovery. Priya helps athletes move better and recover faster.",
-    specialties: ["Yoga", "Mobility", "Recovery"],
-    image: "/images/trainers/priya-sharma.jpg",
-    certifications: ["RYT-500", "FRC Mobility Specialist"],
-  },
-  {
-    name: "Derek Okafor",
+    name: "Yash Rathod",
     role: "Personal Training Director",
-    bio: "Passionate about transformations, Derek has helped hundreds of clients achieve goals they never thought possible. His holistic approach covers training, nutrition, and mindset.",
-    specialties: ["Body Transformation", "Nutrition", "Lifestyle Coaching"],
-    image: "/images/trainers/derek-okafor.jpg",
-    certifications: ["NASM-CPT", "Precision Nutrition L2"],
-  },
-  {
-    name: "Emma Larsson",
-    role: "Group Fitness Lead",
-    bio: "An energetic force of nature, Emma leads group sessions that are equal parts challenging and fun. Her classes are always the first to fill up.",
-    specialties: ["Group Training", "Functional Fitness", "CrossFit"],
-    image: "/images/trainers/emma-larsson.jpg",
-    certifications: ["CrossFit L2", "ACE Group Fitness"],
+    bio: "With a background in sports science and extensive years in fitness, Yash designs high-intensity programs that deliver measurable results fast.",
+    specialties: ["HIIT", "Fat Loss", "Metabolic Conditioning"],
+    image: "/images/trainers/gym_g1.png",
+    certifications: ["ACE-CPT", "Precision Nutrition L1"],
   },
 ];
 
 export const TESTIMONIALS = [
   {
-    name: "Michael Torres",
-    role: "Member for 2 years",
+    name: "Priya Sharma",
+    role: "Founding Member",
     quote:
-      "The Forge changed everything for me. I walked in 40 pounds overweight and walked out a completely different person. The trainers here don't just coach — they believe in you.",
+      "The Forge changed everything for me. I walked in on their opening day in Jan 2026 overweight, and I've already walked out a completely different person. The trainers here don't just coach — they believe in you.",
     rating: 5,
+    avatar: "/images/testimonials/priya-sharma.jpg",
   },
   {
-    name: "Aisha Johnson",
-    role: "Member for 1 year",
+    name: "Rahul Verma",
+    role: "Member since Jan 2026",
     quote:
-      "I've been to a dozen gyms. The Forge is different. The energy, the equipment, the community — it's a place that makes you WANT to show up every single day.",
+      "I've been to a dozen gyms. This new facility is different. The energy, the rogue equipment, the community — it's a place that makes you WANT to show up every single day.",
     rating: 5,
+    avatar: "https://randomuser.me/api/portraits/men/45.jpg",
   },
   {
-    name: "David Park",
-    role: "Member for 3 years",
+    name: "Amit Kumar",
+    role: "Founding Member",
     quote:
-      "As a competitive lifter, I need a gym that takes strength seriously. The Forge has the best equipment, the best coaches, and the best atmosphere I've ever trained in.",
+      "As a competitive lifter, I need a gym that takes strength seriously. The Forge has the best equipment, the best coaches, and the best atmosphere I've ever trained in since they opened.",
     rating: 5,
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
-    name: "Rachel Kim",
-    role: "Member for 6 months",
+    name: "Neha Patel",
+    role: "Member since Feb 2026",
     quote:
-      "I was intimidated to join a 'serious' gym, but The Forge welcomed me from day one. The personal training program helped me build confidence and strength I never knew I had.",
+      "I was intimidated to join a 'serious' gym, but The Forge welcomed me warmly. The personal training program helped me build confidence and strength I never knew I had.",
     rating: 5,
+    avatar: "https://randomuser.me/api/portraits/women/46.jpg",
   },
 ];
 
 export const GALLERY_IMAGES = [
+  {
+    src: "/images/gallery/gym1.jpeg",
+    alt: "Main gym floor",
+    category: "facility",
+  },
+  {
+    src: "/images/gallery/gym2.jpeg",
+    alt: "Gym equipment",
+    category: "facility",
+  },
+  {
+    src: "/images/gallery/gym3.jpeg",
+    alt: "Free weights area",
+    category: "facility",
+  },
+  {
+    src: "/images/gallery/gym4.jpeg",
+    alt: "Training area",
+    category: "training",
+  },
+  {
+    src: "/images/gallery/gym-interior - Copy.jpeg",
+    alt: "Gym interior wide shot",
+    category: "facility",
+  },
   {
     src: "/images/gallery/gym-floor.jpg",
     alt: "Main training floor with modern equipment",
@@ -291,34 +295,9 @@ export const GALLERY_IMAGES = [
     category: "training",
   },
   {
-    src: "/images/gallery/cardio-zone.jpg",
-    alt: "Cardio zone with premium machines",
-    category: "facility",
-  },
-  {
     src: "/images/gallery/boxing-area.jpg",
     alt: "Boxing and combat area",
     category: "training",
-  },
-  {
-    src: "/images/gallery/gym-interior.jpg",
-    alt: "Gym interior wide shot",
-    category: "facility",
-  },
-  {
-    src: "/images/gallery/kettlebell-training.jpg",
-    alt: "Kettlebell training area",
-    category: "training",
-  },
-  {
-    src: "/images/gallery/battle-ropes.jpg",
-    alt: "Athlete with battle ropes",
-    category: "training",
-  },
-  {
-    src: "/images/gallery/recovery-zone.jpg",
-    alt: "Recovery and stretching zone",
-    category: "facility",
   },
   {
     src: "/images/gallery/athletic-performance.jpg",
@@ -329,19 +308,20 @@ export const GALLERY_IMAGES = [
 
 export const CONTACT_INFO = {
   address: "Ground Floor, A57, Zeta I, Greater Noida, Uttar Pradesh 201310",
-  phone: "+1 (555) 234-5678",
-  email: "info@theforgegym.com",
-  whatsapp: "+15552345678",
+  phone: "7017799025",
+  email: "Jeetutk750@gmail.com",
+  whatsapp: "917017799025",
   hours: [
     { day: "Monday - Saturday", time: "6:00 AM - 10:00 PM" },
     { day: "Sunday", time: "Closed" },
   ],
   socials: {
-    instagram: "#",
-    facebook: "#",
-    youtube: "#",
-    twitter: "#",
+    instagram: "https://www.instagram.com/yashfit_0/",
+    facebook: "https://www.facebook.com/yashh.rathod.1/",
+    threads: "https://www.threads.com/@yashfit_0?xmt=AQF0hyESdN9LcfGIORuilcE4BjWQkExBKGU3Zdao3smUkSc",
   },
+  owner: "Jeet Singh",
+  whatsappMessage: "Hello! I came across your wonderful website and I'm interested in joining the gym. Could you share some details with me? Thanks!",
 };
 
 export const WHY_CHOOSE_US = [
@@ -360,7 +340,7 @@ export const WHY_CHOOSE_US = [
   {
     title: "Proven Results",
     description:
-      "Over 10,000 members trained and thousands of successful body transformations achieved since day one.",
+      "Hundreds of successful body transformations achieved rapidly since our launch in January 2026.",
     icon: "trending-up",
   },
   {

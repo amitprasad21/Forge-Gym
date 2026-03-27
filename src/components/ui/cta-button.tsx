@@ -34,7 +34,7 @@ export default function CTAButton({
   onClick,
 }: CTAButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center rounded-lg font-bold uppercase tracking-wide transition-all duration-300";
+    "inline-flex items-center justify-center rounded-lg font-bold uppercase tracking-wide transition-all duration-300 hover:scale-[1.03] active:scale-[0.98]";
 
   const classes = cn(baseStyles, variantStyles[variant], sizeStyles[size], className);
 

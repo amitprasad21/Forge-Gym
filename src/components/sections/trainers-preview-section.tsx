@@ -29,8 +29,8 @@ export default function TrainersPreviewSection() {
               : "opacity-0 translate-y-8"
           )}
         >
-          {previewTrainers.map((trainer) => (
-            <TrainerCard key={trainer.name} {...trainer} />
+          {previewTrainers.map((trainer, index) => (
+            <TrainerCard key={`${trainer.name}-${index}`} {...trainer} />
           ))}
         </div>
 

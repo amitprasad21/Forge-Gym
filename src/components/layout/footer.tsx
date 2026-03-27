@@ -39,26 +39,9 @@ function FacebookIcon() {
   );
 }
 
-function YoutubeIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z" />
-      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
-    </svg>
-  );
-}
 
-function TwitterIcon() {
+
+function ThreadsIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -71,17 +54,18 @@ function TwitterIcon() {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
-      <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+      <path d="M14 12V8H8v10a4 4 0 0 0 4 4h2" />
+      <path d="M22 12A10 10 0 1 0 12 22a10 10 0 0 0 10-10z" />
+      <path d="M14 12v3a2 2 0 0 1-2 2h-1" />
+      <path d="M12 8a2 2 0 0 1 2 2v2" />
     </svg>
   );
 }
 
 const socialIcons = [
-  { name: "Instagram", icon: InstagramIcon, href: CONTACT_INFO.socials.instagram },
-  { name: "Facebook", icon: FacebookIcon, href: CONTACT_INFO.socials.facebook },
-  { name: "YouTube", icon: YoutubeIcon, href: CONTACT_INFO.socials.youtube },
-  { name: "Twitter", icon: TwitterIcon, href: CONTACT_INFO.socials.twitter },
+  { name: "Instagram", icon: InstagramIcon, href: CONTACT_INFO.socials.instagram, colorHover: "hover:bg-[#E1306C]/20 hover:text-[#E1306C]", colorBase: "text-[#E1306C]" },
+  { name: "Facebook", icon: FacebookIcon, href: CONTACT_INFO.socials.facebook, colorHover: "hover:bg-[#1877F2]/20 hover:text-[#1877F2]", colorBase: "text-[#1877F2]" },
+  { name: "Threads", icon: ThreadsIcon, href: CONTACT_INFO.socials.threads, colorHover: "hover:bg-white/20 hover:text-white", colorBase: "text-white" },
 ];
 
 export default function Footer() {
@@ -92,13 +76,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {/* Brand Column */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="inline-flex items-center gap-1">
-              <span className="text-2xl font-extrabold tracking-wider text-forge-red">
-                THE
-              </span>
-              <span className="text-2xl font-extrabold tracking-wider text-forge-white">
-                FORGE
-              </span>
+            <Link href="/" className="inline-flex items-center">
+              <img src="/logo.png" alt="The Forge Gym Logo" className="logo h-16 md:h-24 w-auto object-contain opacity-90 transition-opacity hover:opacity-100" />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-forge-white/50">
               {FOOTER_DATA.description}
@@ -112,7 +91,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-forge-white/5 text-forge-white/50 transition-all duration-300 hover:bg-forge-red/10 hover:text-forge-red"
+                  className={`flex h-10 w-10 items-center justify-center rounded-lg bg-forge-white/5 transition-all duration-300 ${social.colorBase} ${social.colorHover}`}
                 >
                   <social.icon />
                 </a>
@@ -121,7 +100,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links Column */}
-          <div>
+          <div className="hidden sm:block">
             <h3 className="text-sm font-bold uppercase tracking-wider text-forge-white">
               Quick Links
             </h3>
@@ -140,7 +119,7 @@ export default function Footer() {
           </div>
 
           {/* Programs Column */}
-          <div>
+          <div className="hidden sm:block">
             <h3 className="text-sm font-bold uppercase tracking-wider text-forge-white">
               Programs
             </h3>

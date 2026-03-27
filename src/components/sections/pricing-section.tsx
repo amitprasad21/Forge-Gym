@@ -21,7 +21,7 @@ export default function PricingSection() {
         <div
           ref={ref}
           className={cn(
-            "grid grid-cols-1 items-center gap-6 md:grid-cols-3 transition-all duration-700",
+            "grid grid-cols-1 items-center gap-6 md:grid-cols-2 lg:grid-cols-4 transition-all duration-700",
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -31,21 +31,19 @@ export default function PricingSection() {
             <div
               key={plan.name}
               className={cn(
-                "group relative overflow-hidden rounded-2xl border transition-all duration-500",
+                "group relative overflow-hidden rounded-[2rem] border transition-all duration-500 backdrop-blur-2xl",
                 plan.popular
-                  ? "border-forge-red bg-forge-gray-900 shadow-2xl shadow-forge-red/10 md:scale-105 md:z-10"
-                  : "border-white/5 bg-forge-gray-900/50 hover:border-forge-red/20 hover:bg-forge-gray-900"
+                  ? "border-forge-red/50 bg-gradient-to-br from-forge-gray-900/90 to-forge-black/90 shadow-[0_0_40px_rgba(230,57,70,0.15)] z-10"
+                  : "border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-forge-red/30 hover:shadow-2xl hover:shadow-forge-red/5"
               )}
               style={{ transitionDelay: `${index * 120}ms` }}
             >
               {/* Popular badge */}
               {plan.popular && (
-                <div className="absolute top-0 left-0 right-0">
-                  <div className="flex items-center justify-center bg-forge-red py-2">
-                    <span className="text-xs font-bold uppercase tracking-widest text-white">
-                      Most Popular
-                    </span>
-                  </div>
+                <div className="absolute top-5 -right-10 z-20 w-40 rotate-45 transform bg-forge-red py-1.5 text-center shadow-lg">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+                    Most Popular
+                  </span>
                 </div>
               )}
 
@@ -54,7 +52,7 @@ export default function PricingSection() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-forge-red/30 via-forge-red/60 to-forge-red/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               )}
 
-              <div className={cn("p-8", plan.popular && "pt-14")}>
+              <div className="p-8">
                 {/* Plan name */}
                 <h3
                   className={cn(
@@ -66,11 +64,11 @@ export default function PricingSection() {
                 </h3>
 
                 {/* Price */}
-                <div className="mt-4 flex items-baseline gap-1">
+                <div className="mt-4 flex items-baseline gap-1 group-hover:scale-105 transition-transform duration-300 transform origin-left">
                   <span className="text-sm font-semibold text-forge-gray-500">
-                    $
+                    ₹
                   </span>
-                  <span className="text-5xl font-black tracking-tight text-white">
+                  <span className="text-5xl font-black tracking-tight text-white group-hover:text-forge-red transition-colors duration-300">
                     {plan.price}
                   </span>
                   <span className="ml-1 text-sm font-medium text-forge-gray-500">

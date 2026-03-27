@@ -42,7 +42,7 @@ function PageHero() {
       <div className="absolute top-0 right-[20%] h-full w-px rotate-12 bg-gradient-to-b from-transparent via-forge-red/8 to-transparent" />
       <div className="absolute top-0 left-[25%] h-full w-px -rotate-12 bg-gradient-to-b from-transparent via-forge-red/5 to-transparent" />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8 pt-20 md:pt-24">
         {/* Tagline */}
         <div className="mb-6 flex items-center justify-center gap-3 opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]">
           <span className="h-px w-10 bg-forge-red" />

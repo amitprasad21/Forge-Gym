@@ -29,6 +29,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
   }
 
   body {
@@ -43,6 +44,23 @@
   ::selection {
     background-color: var(--color-forge-red);
     color: white;
+  }
+
+  /* Premium Image Styling */
+  img:not(.logo):not(.object-contain) {
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    height: auto;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Hover effect for premium look */
+  img:not(.logo):not(.object-contain):hover {
+    box-shadow: 0 12px 40px rgba(230, 57, 70, 0.25);
+    transform: scale(1.02);
   }
 }
 

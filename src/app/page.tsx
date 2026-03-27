@@ -5,6 +5,7 @@ import ProgramsPreviewSection from "@/components/sections/programs-preview-secti
 import PricingSection from "@/components/sections/pricing-section";
 import TrainersPreviewSection from "@/components/sections/trainers-preview-section";
 import TestimonialsSection from "@/components/sections/testimonials-section";
+import CertificatesSection from "@/components/sections/certificates-section";
 import GalleryPreviewSection from "@/components/sections/gallery-preview-section";
 import CTASection from "@/components/sections/cta-section";
 import ContactPreviewSection from "@/components/sections/contact-preview-section";
@@ -19,6 +20,7 @@ export default function HomePage() {
       <PricingSection />
       <TrainersPreviewSection />
       <TestimonialsSection />
+      <CertificatesSection />
       <GalleryPreviewSection />
       <CTASection />
       <ContactPreviewSection />

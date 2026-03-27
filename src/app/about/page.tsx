@@ -24,7 +24,7 @@ function PageHero() {
       <div className="absolute top-10 right-16 h-2 w-2 rounded-full bg-forge-red/30" />
       <div className="absolute bottom-16 left-16 h-2 w-2 rounded-full bg-forge-red/30" />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8 pt-20 md:pt-24">
         {/* Tagline */}
         <div className="mb-6 flex items-center justify-center gap-3 opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]">
           <span className="h-px w-10 bg-forge-red" />

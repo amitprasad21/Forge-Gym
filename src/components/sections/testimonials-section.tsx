@@ -11,51 +11,51 @@ const TESTIMONIALS: Array<{
 }> = [
   {
     author: {
-      name: "Michael Torres",
-      handle: "Member · 2 years",
-      avatar: "/images/testimonials/michael-torres.jpg",
-    },
-    text: "The Forge changed everything for me. I walked in 40 pounds overweight and walked out a completely different person. The trainers here don't just coach — they believe in you.",
-  },
-  {
-    author: {
-      name: "Aisha Johnson",
-      handle: "Member · 1 year",
-      avatar: "/images/testimonials/aisha-johnson.jpg",
-    },
-    text: "I've been to a dozen gyms. The Forge is different. The energy, the equipment, the community — it's a place that makes you WANT to show up every single day.",
-  },
-  {
-    author: {
-      name: "David Park",
-      handle: "Member · 3 years",
-      avatar: "/images/testimonials/david-park.jpg",
-    },
-    text: "As a competitive lifter, I need a gym that takes strength seriously. The Forge has the best equipment, the best coaches, and the best atmosphere I've ever trained in.",
-  },
-  {
-    author: {
-      name: "Rachel Kim",
-      handle: "Member · 6 months",
-      avatar: "/images/testimonials/rachel-kim.jpg",
-    },
-    text: "I was intimidated to join a 'serious' gym, but The Forge welcomed me from day one. The personal training program helped me build confidence and strength I never knew I had.",
-  },
-  {
-    author: {
-      name: "James Rivera",
-      handle: "Member · 4 years",
-      avatar: "/images/testimonials/james-rivera.jpg",
-    },
-    text: "Nothing compares to the atmosphere at The Forge. From the moment you walk in, you feel the energy. The coaching staff pushes you beyond what you thought was possible.",
-  },
-  {
-    author: {
       name: "Priya Sharma",
-      handle: "Member · 1.5 years",
+      handle: "Founding Member",
       avatar: "/images/testimonials/priya-sharma.jpg",
     },
-    text: "The group sessions are incredible — challenging but never intimidating. I've made real friends here, and my strength has doubled since I started. Best decision I ever made.",
+    text: "The Forge changed everything for me. I walked in on opening day in Jan 2026 overweight, and I've already walked out a completely different person.",
+  },
+  {
+    author: {
+      name: "Rahul Verma",
+      handle: "Member since Jan 2026",
+      avatar: "https://randomuser.me/api/portraits/men/45.jpg",
+    },
+    text: "I've been to a dozen gyms. This is different. The energy, the equipment, the community — it's a place that makes you WANT to show up every single day.",
+  },
+  {
+    author: {
+      name: "Amit Kumar",
+      handle: "Founding Member",
+      avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    },
+    text: "As a competitive lifter, I need a gym that takes strength seriously. The Forge has the best equipment and atmosphere I've ever trained in.",
+  },
+  {
+    author: {
+      name: "Neha Patel",
+      handle: "Member since Feb 2026",
+      avatar: "https://randomuser.me/api/portraits/women/46.jpg",
+    },
+    text: "I was intimidated to join a 'serious' gym, but The Forge welcomed me warmly from day one. The trainers are incredibly supportive.",
+  },
+  {
+    author: {
+      name: "Vikram Singh",
+      handle: "Founding Member",
+      avatar: "https://randomuser.me/api/portraits/men/73.jpg",
+    },
+    text: "Nothing compares to the atmosphere since they launched. From the moment you walk in, you feel the energy. The coaches push you safely.",
+  },
+  {
+    author: {
+      name: "Sneha Reddy",
+      handle: "Member since Jan 2026",
+      avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+    },
+    text: "The new group sessions are incredible — challenging but never intimidating. I've made real friends here. Best decision I ever made.",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function TestimonialsSection() {
   const { ref, isVisible } = useScrollReveal();
 
   return (
-    <section className="overflow-hidden bg-white py-20 md:py-28">
+    <section className="overflow-hidden bg-forge-dark py-20 md:py-28 border-t border-forge-white/5">
       {/* Header */}
       <div
         ref={ref}
@@ -80,11 +80,11 @@ export default function TestimonialsSection() {
             </span>
             <span className="h-px w-8 bg-forge-red" />
           </div>
-          <h2 className="max-w-[720px] text-3xl font-extrabold uppercase leading-tight text-gray-900 sm:text-4xl md:text-5xl">
+          <h2 className="max-w-[720px] text-3xl font-extrabold uppercase leading-tight text-white sm:text-4xl md:text-5xl">
             What Our{" "}
             <span className="text-forge-red">Members</span> Say
           </h2>
-          <p className="max-w-[600px] text-base text-gray-500 sm:text-lg">
+          <p className="max-w-[600px] text-base text-forge-gray-400 sm:text-lg">
             Don&apos;t take our word for it. Hear from the people who&apos;ve
             transformed at The Forge.
           </p>
@@ -100,7 +100,8 @@ export default function TestimonialsSection() {
                 <TestimonialCard
                   key={`${setIndex}-${i}`}
                   {...testimonial}
-                  variant="light"
+                  variant="dark"
+                  className="glass-card"
                 />
               ))
             )}
@@ -108,8 +109,8 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Edge fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/4 bg-gradient-to-r from-white sm:block" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/4 bg-gradient-to-l from-white sm:block" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-1/4 bg-gradient-to-r from-forge-dark sm:block" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/4 bg-gradient-to-l from-forge-dark sm:block" />
       </div>
     </section>
   );
