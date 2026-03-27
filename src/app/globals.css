@@ -28,7 +28,6 @@
   }
 
   html {
-    scroll-behavior: smooth;
     scroll-padding-top: 8rem;
   }
 
@@ -200,13 +199,16 @@
 @layer utilities {
   .animate-marquee-left {
     animation: marquee-left var(--marquee-speed, 40s) linear infinite;
+    will-change: transform;
   }
 
   .animate-marquee-right {
     animation: marquee-right var(--marquee-speed, 40s) linear infinite;
+    will-change: transform;
   }
 
   .animate-marquee-testimonial {
     animation: marquee-testimonial var(--duration, 40s) linear infinite;
+    will-change: transform;
   }
 }

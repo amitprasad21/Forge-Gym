@@ -93,16 +93,20 @@ export default function TestimonialsSection() {
 
       {/* Marquee */}
       <div className="relative mt-12 flex w-full flex-col items-center justify-center overflow-hidden sm:mt-16">
-        <div className="group flex overflow-hidden p-2 [--gap:1rem] [gap:var(--gap)] flex-row [--duration:40s]">
-          <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee-testimonial flex-row group-hover:[animation-play-state:paused]">
-            {[...Array(4)].map((_, setIndex) =>
+        <div className="group flex w-full overflow-hidden flex-row">
+          <div
+            className="flex gap-4 sm:gap-6 lg:gap-8 animate-marquee-left flex-row group-hover:[animation-play-state:paused]"
+            style={{ "--marquee-speed": "40s" } as React.CSSProperties}
+          >
+            {[...Array(2)].map((_, setIndex) =>
               TESTIMONIALS.map((testimonial, i) => (
-                <TestimonialCard
-                  key={`${setIndex}-${i}`}
-                  {...testimonial}
-                  variant="dark"
-                  className="glass-card"
-                />
+                <div key={`${setIndex}-${i}`} className="flex-shrink-0 w-[300px] sm:w-[350px]">
+                  <TestimonialCard
+                    {...testimonial}
+                    variant="dark"
+                    className="glass-card h-full"
+                  />
+                </div>
               ))
             )}
           </div>
