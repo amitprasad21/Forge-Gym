@@ -114,6 +114,7 @@ function FilterBar({
 /* ------------------------------------------------------------------ */
 function GalleryGrid({ activeFilter }: { activeFilter: FilterValue }) {
   const { ref, isVisible } = useScrollReveal();
+  const [selectedImage, setSelectedImage] = useState<typeof GALLERY_IMAGES[0] | null>(null);
 
   const filteredImages =
     activeFilter === "all"
@@ -135,8 +136,9 @@ function GalleryGrid({ activeFilter }: { activeFilter: FilterValue }) {
         return (
           <div
             key={image.src}
+            onClick={() => setSelectedImage(image)}
             className={cn(
-              "group relative overflow-hidden rounded-xl transition-all duration-500",
+              "group relative overflow-hidden rounded-xl transition-all duration-500 cursor-pointer",
               isTall ? "sm:row-span-2" : ""
             )}
             style={{ transitionDelay: `${index * 60}ms` }}
@@ -176,6 +178,53 @@ function GalleryGrid({ activeFilter }: { activeFilter: FilterValue }) {
           </div>
         );
       })}
+      {/* Lightbox Overlay */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 backdrop-blur-md transition-opacity duration-300"
+          onClick={() => setSelectedImage(null)}
+        >
+          {/* Close button */}
+          <button
+            className="absolute top-6 right-6 z-[110] rounded-full bg-white/10 p-2 text-white transition-colors duration-300 hover:bg-forge-red hover:text-white"
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedImage(null);
+            }}
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Image container */}
+          <div
+            className="relative h-[85vh] w-full max-w-6xl overflow-hidden rounded-xl border border-white/10 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              fill
+              className="object-contain"
+              sizes="100vw"
+            />
+            {/* Caption */}
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 pt-10 pb-6 text-center text-white">
+              <span className="mb-2 inline-block rounded bg-forge-red px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                {selectedImage.category}
+              </span>
+              <p className="text-lg font-semibold tracking-wide drop-shadow-md">{selectedImage.alt}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
