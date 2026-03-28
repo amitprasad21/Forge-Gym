@@ -256,13 +256,13 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <a
-              href="#"
+              href="/contact"
               className="text-xs text-forge-white/30 transition-colors duration-300 hover:text-forge-white/50"
             >
               Privacy Policy
             </a>
             <a
-              href="#"
+              href="/contact"
               className="text-xs text-forge-white/30 transition-colors duration-300 hover:text-forge-white/50"
             >
               Terms of Service

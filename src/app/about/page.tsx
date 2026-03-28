@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import SectionHeading from "@/components/ui/section-heading";
 import CTAButton from "@/components/ui/cta-button";
 import { useScrollReveal } from "@/lib/useScrollReveal";
@@ -117,26 +118,30 @@ function OurStorySection() {
             </div>
           </div>
 
-          {/* Right - Decorative Card */}
+          {/* Right - Gym Image */}
           <div className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-forge-gray-800 bg-forge-gray-900">
-              {/* Geometric cross-hatch pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,rgba(230,57,70,0.3)_49%,rgba(230,57,70,0.3)_51%,transparent_52%)] bg-[length:30px_30px]" />
-              </div>
-
-              {/* Red accent corner borders */}
-              <div className="absolute top-4 left-4 h-24 w-24 border-t-2 border-l-2 border-forge-red/40" />
-              <div className="absolute bottom-4 right-4 h-24 w-24 border-b-2 border-r-2 border-forge-red/40" />
-
-              {/* Horizontal accent line */}
-              <div className="absolute top-1/2 left-8 right-8 h-px -translate-y-1/2 bg-gradient-to-r from-forge-red/30 via-forge-red/10 to-forge-red/30" />
-
-              {/* Center content */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-forge-red/10">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+              <Image
+                src="/images/gallery/gym-interior.jpeg"
+                alt="The Forge Gym interior — training floor with premium equipment"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              {/* Overlay with Est. badge */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.25em] text-forge-red">
+                    Est. March 2026
+                  </p>
+                  <p className="mt-1 text-sm font-medium uppercase tracking-widest text-forge-gray-300">
+                    The Forge Gym
+                  </p>
+                </div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-forge-red/20 backdrop-blur-sm">
                   <svg
-                    className="h-10 w-10 text-forge-red"
+                    className="h-6 w-6 text-forge-red"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -149,18 +154,15 @@ function OurStorySection() {
                     />
                   </svg>
                 </div>
-                <p className="mt-4 text-xs font-bold uppercase tracking-[0.25em] text-forge-gray-500">
-                  Est. March 2026
-                </p>
-                <p className="mt-1 text-sm font-medium uppercase tracking-widest text-forge-gray-500">
-                  The Forge Gym
-                </p>
               </div>
             </div>
 
+            {/* Red Accent Corners */}
+            <div className="absolute -top-3 -left-3 h-24 w-24 border-t-2 border-l-2 border-forge-red/40 rounded-tl-xl" />
+            <div className="absolute -bottom-3 -right-3 h-24 w-24 border-b-2 border-r-2 border-forge-red/40 rounded-br-xl" />
+
             {/* Floating glow accent */}
-            <div className="absolute -top-4 -right-4 h-24 w-24 rounded-xl bg-forge-red/10 blur-xl" />
-            <div className="absolute -bottom-4 -left-4 h-16 w-16 rounded-full bg-forge-red/5 blur-xl" />
+            <div className="absolute -top-4 -right-4 h-20 w-20 rounded-xl bg-forge-red/10 blur-xl" />
           </div>
         </div>
       </div>
@@ -363,10 +365,10 @@ function OurValuesSection() {
 /*  5. STATS / NUMBERS SECTION                                        */
 /* ------------------------------------------------------------------ */
 const stats = [
-  { value: "500+", label: "Members & Growing" },
-  { value: "15+", label: "Expert Trainers" },
+  { value: "100+", label: "Members & Growing" },
+  { value: "2", label: "Expert Trainers" },
   { value: "10K+", label: "Sq Ft Facility" },
-  { value: "50+", label: "Weekly Classes" },
+  { value: "3+", label: "Weekly Sessions" },
 ];
 
 function StatsSection() {

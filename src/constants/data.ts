@@ -17,9 +17,9 @@ export const HERO_DATA = {
   backgroundImage: "/images/hero/hero-bg.jpg",
   athleteImage: "/images/hero/hero-athlete.jpg",
   stats: [
-    { value: "500+", label: "Founding Members" },
-    { value: "15+", label: "Expert Trainers" },
-    { value: "50+", label: "Weekly Classes" },
+    { value: "100+", label: "Members & Growing" },
+    { value: "2", label: "Expert Trainers" },
+    { value: "3+", label: "Weekly Sessions" },
     { value: "2026", label: "Est. March" },
   ],
 };
@@ -328,13 +328,13 @@ export const WHY_CHOOSE_US = [
   {
     title: "Elite Equipment",
     description:
-      "Over $500K invested in premium Rogue, Eleiko, and Hammer Strength equipment. Constantly maintained, never outdated.",
+      "Premium Rogue, Eleiko, and Hammer Strength equipment — hand-picked and constantly maintained for peak performance.",
     icon: "dumbbell",
   },
   {
     title: "Expert Coaching",
     description:
-      "Every trainer holds nationally recognized certifications with 5+ years of real coaching experience.",
+      "Our trainers hold nationally recognized certifications and bring years of real coaching experience to every session.",
     icon: "award",
   },
   {
