@@ -105,6 +105,8 @@ export default function GalleryPreviewSection() {
           onClick={() => setSelectedImage(null)}
         >
           <button
+            type="button"
+            aria-label="Close lightbox"
             className="absolute top-6 right-6 z-[110] rounded-full bg-white/10 p-2 text-white transition-colors duration-300 hover:bg-forge-red"
             onClick={(e) => {
               e.stopPropagation();
@@ -123,7 +125,7 @@ export default function GalleryPreviewSection() {
           </button>
 
           <div
-            className="relative h-[85vh] w-full max-w-6xl overflow-hidden rounded-xl border border-white/10 shadow-2xl"
+            className="relative max-h-[85vh] h-[85vh] w-full max-w-6xl overflow-hidden rounded-xl border border-white/10 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
