@@ -15,9 +15,9 @@ export default function TrainersPreviewSection() {
     <section className="section-padding bg-forge-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          tagline="MEET THE TEAM"
-          title="EXPERT TRAINERS"
-          description="Our certified professionals bring passion, expertise, and results to every session."
+          tagline="MEET THE COACH"
+          title="EXPERT TRAINER"
+          description="Our certified professional brings passion, expertise, and results to every session."
         />
 
         <div

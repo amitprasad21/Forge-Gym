@@ -15,12 +15,12 @@ const TESTIMONIALS: Array<{
       handle: "Founding Member",
       avatar: "/images/testimonials/priya-sharma.jpg",
     },
-    text: "The Forge changed everything for me. I walked in on opening day in Jan 2026 overweight, and I've already walked out a completely different person.",
+    text: "The Forge changed everything for me. I walked in on opening day in March 2026 overweight, and I've already walked out a completely different person.",
   },
   {
     author: {
       name: "Rahul Verma",
-      handle: "Member since Jan 2026",
+      handle: "Member since March 2026",
       avatar: "https://randomuser.me/api/portraits/men/45.jpg",
     },
     text: "I've been to a dozen gyms. This is different. The energy, the equipment, the community — it's a place that makes you WANT to show up every single day.",
@@ -36,7 +36,7 @@ const TESTIMONIALS: Array<{
   {
     author: {
       name: "Neha Patel",
-      handle: "Member since Feb 2026",
+      handle: "Member since March 2026",
       avatar: "https://randomuser.me/api/portraits/women/46.jpg",
     },
     text: "I was intimidated to join a 'serious' gym, but The Forge welcomed me warmly from day one. The trainers are incredibly supportive.",
@@ -52,7 +52,7 @@ const TESTIMONIALS: Array<{
   {
     author: {
       name: "Sneha Reddy",
-      handle: "Member since Jan 2026",
+      handle: "Member since March 2026",
       avatar: "https://randomuser.me/api/portraits/women/68.jpg",
     },
     text: "The new group sessions are incredible — challenging but never intimidating. I've made real friends here. Best decision I ever made.",

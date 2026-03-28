@@ -17,10 +17,10 @@ export const HERO_DATA = {
   backgroundImage: "/images/hero/hero-bg.jpg",
   athleteImage: "/images/hero/hero-athlete.jpg",
   stats: [
-    { value: "500+", label: "Founding Members" },
-    { value: "15+", label: "Expert Trainers" },
-    { value: "50+", label: "Weekly Classes" },
-    { value: "2026", label: "Est. January" },
+    { value: "100+", label: "Members & Growing" },
+    { value: "1", label: "Expert Trainer" },
+    { value: "3+", label: "Weekly Sessions" },
+    { value: "2026", label: "Est. March" },
   ],
 };
 
@@ -61,7 +61,7 @@ export const ABOUT_PREVIEW = {
   tagline: "WHO WE ARE",
   title: "More Than a Gym.\nA Training Ground.",
   description:
-    "Established in January 2026, The Forge was built with one purpose: to create an environment where serious training happens. No gimmicks, no shortcuts — just raw dedication, expert coaching, and the tools you need to transform.",
+    "Established in March 2026, The Forge was built with one purpose: to create an environment where serious training happens. No gimmicks, no shortcuts — just raw dedication, expert coaching, and the tools you need to transform.",
   image: "/images/gallery/gym-floor.jpg",
   features: [
     "10,000+ sq ft training floor",
@@ -213,13 +213,13 @@ export const TESTIMONIALS = [
     name: "Priya Sharma",
     role: "Founding Member",
     quote:
-      "The Forge changed everything for me. I walked in on their opening day in Jan 2026 overweight, and I've already walked out a completely different person. The trainers here don't just coach — they believe in you.",
+      "The Forge changed everything for me. I walked in on their opening day in March 2026 overweight, and I've already walked out a completely different person. The trainers here don't just coach — they believe in you.",
     rating: 5,
     avatar: "/images/testimonials/priya-sharma.jpg",
   },
   {
     name: "Rahul Verma",
-    role: "Member since Jan 2026",
+    role: "Member since March 2026",
     quote:
       "I've been to a dozen gyms. This new facility is different. The energy, the rogue equipment, the community — it's a place that makes you WANT to show up every single day.",
     rating: 5,
@@ -235,7 +235,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Neha Patel",
-    role: "Member since Feb 2026",
+    role: "Member since March 2026",
     quote:
       "I was intimidated to join a 'serious' gym, but The Forge welcomed me warmly. The personal training program helped me build confidence and strength I never knew I had.",
     rating: 5,
@@ -328,13 +328,13 @@ export const WHY_CHOOSE_US = [
   {
     title: "Elite Equipment",
     description:
-      "Over $500K invested in premium Rogue, Eleiko, and Hammer Strength equipment. Constantly maintained, never outdated.",
+      "Premium Rogue, Eleiko, and Hammer Strength equipment — hand-picked and constantly maintained for peak performance.",
     icon: "dumbbell",
   },
   {
     title: "Expert Coaching",
     description:
-      "Every trainer holds nationally recognized certifications with 5+ years of real coaching experience.",
+      "Our trainers hold nationally recognized certifications and bring years of real coaching experience to every session.",
     icon: "award",
   },
   {

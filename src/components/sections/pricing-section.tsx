@@ -40,9 +40,9 @@ export default function PricingSection() {
             >
               {/* Popular badge */}
               {plan.popular && (
-                <div className="absolute top-6 right-6 z-20">
-                  <div className="rounded-full bg-forge-red px-4 py-1.5 shadow-lg shadow-forge-red/30">
-                    <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white">
+                <div className="relative z-20 flex justify-center -mb-4 pt-4">
+                  <div className="rounded-full bg-forge-red px-5 py-1.5 shadow-lg shadow-forge-red/30">
+                    <span className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white whitespace-nowrap">
                       Most Popular
                     </span>
                   </div>

@@ -112,6 +112,7 @@ export default function Navbar() {
 
               {/* Hamburger Button */}
               <button
+                type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="relative flex h-10 w-10 items-center justify-center xl:hidden"
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}

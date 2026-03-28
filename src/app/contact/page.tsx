@@ -74,6 +74,7 @@ function ContactContentSection() {
     subject: "",
     message: "",
   });
+  const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">("idle");
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -81,12 +82,19 @@ function ContactContentSection() {
     >
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    if (formStatus !== "idle") setFormStatus("idle");
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\n\n${formData.message}`;
-    window.location.href = `mailto:${CONTACT_INFO.email}?subject=Contact Form Submission: ${formData.subject}&body=${encodeURIComponent(body)}`;
+    try {
+      const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\n\n${formData.message}`;
+      window.location.href = `mailto:${CONTACT_INFO.email}?subject=Contact Form Submission: ${formData.subject}&body=${encodeURIComponent(body)}`;
+      setFormStatus("success");
+      setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    } catch {
+      setFormStatus("error");
+    }
   };
 
   const inputStyles =
@@ -185,10 +193,22 @@ function ContactContentSection() {
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full rounded bg-forge-red px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-forge-white transition-all duration-300 hover:bg-forge-red/90 hover:shadow-lg hover:shadow-forge-red/25"
+                className="w-full rounded-lg bg-forge-red px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-forge-white transition-all duration-300 hover:bg-forge-red/90 hover:shadow-lg hover:shadow-forge-red/25"
               >
                 Send Message
               </button>
+
+              {/* Form Status Feedback */}
+              {formStatus === "success" && (
+                <div className="rounded-lg border border-green-500/20 bg-green-500/10 px-4 py-3 text-sm text-green-400">
+                  Your email client should have opened. If not, please reach out to us directly at {CONTACT_INFO.email}
+                </div>
+              )}
+              {formStatus === "error" && (
+                <div className="rounded-lg border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-400">
+                  Something went wrong. Please try again or contact us via WhatsApp.
+                </div>
+              )}
             </form>
           </div>
 

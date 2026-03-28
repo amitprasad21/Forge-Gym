@@ -55,8 +55,8 @@ function PageHero() {
           className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-forge-gray-400 opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]"
           style={{ animationDelay: "0.35s" }}
         >
-          Our world-class coaching team brings decades of combined experience,
-          elite certifications, and a genuine passion for helping you reach
+          Our certified coach brings real-world experience, elite
+          certifications, and a genuine passion for helping you reach
           your full potential.
         </p>
       </div>
@@ -79,7 +79,7 @@ function TrainersGridSection() {
         <SectionHeading
           tagline="The Team"
           title={"YOUR COACHES"}
-          description="Every coach at The Forge is handpicked for their expertise, passion, and commitment to your success."
+          description="Our coach at The Forge is handpicked for expertise, passion, and commitment to your success."
         />
 
         <div
@@ -188,7 +188,7 @@ function WhyOurTrainersSection() {
         <SectionHeading
           tagline="What Sets Us Apart"
           title={"WHY OUR\nTRAINERS"}
-          description="The Forge does not hire trainers -- we recruit the best in the industry."
+          description="The Forge does not hire just anyone -- we recruit the best in the industry."
         />
 
         <div
@@ -259,7 +259,7 @@ function TrainersCTA() {
         </h2>
 
         <p className="mx-auto mt-6 max-w-2xl text-lg text-forge-gray-400">
-          Book a session with one of our expert coaches and experience the
+          Book a session with our expert coach and experience the
           difference that world-class coaching makes. Your transformation
           starts with the right guide.
         </p>

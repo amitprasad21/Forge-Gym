@@ -93,6 +93,7 @@ function FilterBar({
     <div className="flex flex-wrap items-center justify-center gap-3">
       {FILTERS.map((filter) => (
         <button
+          type="button"
           key={filter.value}
           onClick={() => onFilterChange(filter.value)}
           className={cn(
@@ -186,6 +187,8 @@ function GalleryGrid({ activeFilter }: { activeFilter: FilterValue }) {
         >
           {/* Close button */}
           <button
+            type="button"
+            aria-label="Close lightbox"
             className="absolute top-6 right-6 z-[110] rounded-full bg-white/10 p-2 text-white transition-colors duration-300 hover:bg-forge-red hover:text-white"
             onClick={(e) => {
               e.stopPropagation();
@@ -205,7 +208,7 @@ function GalleryGrid({ activeFilter }: { activeFilter: FilterValue }) {
 
           {/* Image container */}
           <div
-            className="relative h-[85vh] w-full max-w-6xl overflow-hidden rounded-xl border border-white/10 shadow-2xl"
+            className="relative max-h-[85vh] h-[85vh] w-full max-w-6xl overflow-hidden rounded-xl border border-white/10 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
