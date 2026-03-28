@@ -150,7 +150,7 @@ function OurStorySection() {
                   </svg>
                 </div>
                 <p className="mt-4 text-xs font-bold uppercase tracking-[0.25em] text-forge-gray-500">
-                  Est. January 2026
+                  Est. March 2026
                 </p>
                 <p className="mt-1 text-sm font-medium uppercase tracking-widest text-forge-gray-500">
                   The Forge Gym
