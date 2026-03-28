@@ -91,12 +91,12 @@ function OurStorySection() {
               <p>
                 The Forge was born in early 2026 from a simple belief: that the right
                 environment can unlock potential most people never knew they had.
-                Our founder and owner, Jeet Singh -- a passionate fitness
-                enthusiast and entrepreneur -- grew frustrated with cookie-cutter
-                gyms that treated fitness as an afterthought. He envisioned a
-                space where serious training met genuine community, and every
-                detail was designed to help people become the strongest version
-                of themselves.
+                Our founder Jeet Singh -- a former competitive athlete and certified
+                strength coach -- grew frustrated with cookie-cutter gyms that
+                treated fitness as an afterthought. He envisioned a space
+                where serious training met genuine community, and every detail
+                was designed to help people become the strongest version of
+                themselves.
               </p>
 
               <p>
@@ -154,6 +154,12 @@ function OurStorySection() {
                     />
                   </svg>
                 </div>
+                <p className="mt-4 text-xs font-bold uppercase tracking-[0.25em] text-forge-gray-500">
+                  Est. January 2026
+                </p>
+                <p className="mt-1 text-sm font-medium uppercase tracking-widest text-forge-gray-500">
+                  The Forge Gym
+                </p>
               </div>
             </div>
 
@@ -365,10 +371,10 @@ function OurValuesSection() {
 /*  5. STATS / NUMBERS SECTION                                        */
 /* ------------------------------------------------------------------ */
 const stats = [
-  { value: "100+", label: "Members & Growing" },
-  { value: "1", label: "Expert Trainer" },
+  { value: "500+", label: "Members & Growing" },
+  { value: "15+", label: "Expert Trainers" },
   { value: "10K+", label: "Sq Ft Facility" },
-  { value: "3+", label: "Weekly Sessions" },
+  { value: "50+", label: "Weekly Classes" },
 ];
 
 function StatsSection() {

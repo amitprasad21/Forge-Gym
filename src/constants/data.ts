@@ -198,6 +198,14 @@ export const TRAINERS = [
     image: "/images/trainers/gymm.png",
     certifications: ["NSCA-CSCS", "USAW Level 2"],
   },
+  {
+    name: "Jeet Singh",
+    role: "Founder & Personal Training Director",
+    bio: "With a background in sports science and a lifelong obsession with fitness, Jeet founded The Forge to build the gym he always wished existed. He designs high-intensity programs that deliver real, measurable results.",
+    specialties: ["HIIT", "Fat Loss", "Metabolic Conditioning"],
+    image: "/images/trainers/gym_g1.png",
+    certifications: ["ACE-CPT", "Precision Nutrition L1"],
+  },
 ];
 
 export const TESTIMONIALS = [
@@ -332,7 +340,7 @@ export const WHY_CHOOSE_US = [
   {
     title: "Proven Results",
     description:
-      "Real transformations happening every week since our launch in March 2026. Our members' results speak for themselves.",
+      "Real transformations happening every week since our launch in January 2026. Our members' results speak for themselves.",
     icon: "trending-up",
   },
   {
