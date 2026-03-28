@@ -3,7 +3,7 @@
 import { CONTACT_INFO } from "@/constants/data";
 
 export default function WhatsAppButton() {
-  const message = encodeURIComponent("Hi! I'm interested in The Forge Gym. Can you share more details?");
+  const message = encodeURIComponent(CONTACT_INFO.whatsappMessage || "Hi! I'm interested in The Forge Gym. Can you share more details?");
   const href = `https://wa.me/${CONTACT_INFO.whatsapp}?text=${message}`;
 
   return (

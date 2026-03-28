@@ -66,17 +66,12 @@ export default function Navbar() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="group flex items-center gap-1">
-              <span className="text-2xl font-extrabold tracking-wider text-forge-red transition-colors duration-300 group-hover:text-forge-red/80">
-                THE
-              </span>
-              <span className="text-2xl font-extrabold tracking-wider text-forge-white transition-colors duration-300 group-hover:text-forge-white/80">
-                FORGE
-              </span>
+            <Link href="/" className="group flex items-center">
+              <img src="/logo.png" alt="The Forge Gym Logo" className="logo h-16 md:h-20 max-w-[200px] object-contain transition-opacity duration-300 group-hover:opacity-80" />
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden items-center gap-1 lg:flex">
+            <div className="hidden items-center gap-1 xl:flex">
               {NAV_LINKS.map((link) => {
                 const isActive =
                   pathname === link.href ||
@@ -110,7 +105,7 @@ export default function Navbar() {
             <div className="flex items-center gap-4">
               <Link
                 href="/contact"
-                className="hidden rounded bg-forge-red px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-forge-white transition-all duration-300 hover:bg-forge-red/90 hover:shadow-lg hover:shadow-forge-red/25 lg:inline-block"
+                className="hidden rounded bg-forge-red px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-forge-white transition-all duration-300 hover:bg-forge-red/90 hover:shadow-lg hover:shadow-forge-red/25 xl:inline-block"
               >
                 Join Now
               </Link>
@@ -118,7 +113,7 @@ export default function Navbar() {
               {/* Hamburger Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="relative flex h-10 w-10 items-center justify-center lg:hidden"
+                className="relative flex h-10 w-10 items-center justify-center xl:hidden"
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMobileMenuOpen}
               >
@@ -155,7 +150,7 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          "fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
+          "fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-300 xl:hidden",
           isMobileMenuOpen
             ? "pointer-events-auto opacity-100"
             : "pointer-events-none opacity-0"
@@ -166,7 +161,7 @@ export default function Navbar() {
       {/* Mobile Menu Panel */}
       <div
         className={cn(
-          "fixed top-0 right-0 z-40 flex h-full w-80 max-w-[85vw] flex-col bg-forge-dark/98 backdrop-blur-xl transition-transform duration-300 ease-out lg:hidden",
+          "fixed top-0 right-0 z-40 flex h-full w-80 max-w-[85vw] flex-col bg-forge-dark/98 backdrop-blur-xl transition-transform duration-300 ease-out xl:hidden",
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -174,15 +169,10 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between border-b border-forge-white/5 px-6">
           <Link
             href="/"
-            className="flex items-center gap-1"
+            className="flex items-center"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <span className="text-xl font-extrabold tracking-wider text-forge-red">
-              THE
-            </span>
-            <span className="text-xl font-extrabold tracking-wider text-forge-white">
-              FORGE
-            </span>
+            <img src="/logo.png" alt="The Forge Gym Logo" className="logo h-14 md:h-16 w-auto object-contain" />
           </Link>
         </div>
 

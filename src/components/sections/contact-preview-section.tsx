@@ -136,7 +136,7 @@ export default function ContactPreviewSection() {
 
             {/* WhatsApp CTA */}
             <CTAButton
-              href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
+              href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=${encodeURIComponent(CONTACT_INFO.whatsappMessage || "")}`}
               variant="primary"
               className="w-full"
             >

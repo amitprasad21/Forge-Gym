@@ -15,10 +15,12 @@ function MarqueeRow({
   images,
   direction = "left",
   speed = 40,
+  onImageClick,
 }: {
   images: typeof GALLERY_IMAGES;
   direction?: "left" | "right";
   speed?: number;
+  onImageClick: (image: typeof GALLERY_IMAGES[0]) => void;
 }) {
   /* Duplicate the list so the loop is seamless */
   const doubled = [...images, ...images];
@@ -44,7 +46,8 @@ function MarqueeRow({
         {doubled.map((image, index) => (
           <div
             key={`${image.alt}-${index}`}
-            className="group/img relative h-48 w-72 flex-shrink-0 overflow-hidden rounded-xl sm:h-56 sm:w-80 md:h-64 md:w-96"
+            onClick={() => onImageClick(image)}
+            className="group/img relative h-48 w-72 flex-shrink-0 overflow-hidden rounded-xl sm:h-56 sm:w-80 md:h-64 md:w-96 cursor-pointer"
           >
             <Image
               src={image.src}
@@ -62,8 +65,11 @@ function MarqueeRow({
   );
 }
 
+import { useState } from "react";
+
 export default function GalleryPreviewSection() {
   const { ref, isVisible } = useScrollReveal();
+  const [selectedImage, setSelectedImage] = useState<typeof GALLERY_IMAGES[0] | null>(null);
 
   return (
     <section className="overflow-hidden bg-forge-black py-20 md:py-28">
@@ -82,15 +88,60 @@ export default function GalleryPreviewSection() {
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         )}
       >
-        <MarqueeRow images={ROW_1} direction="left" speed={45} />
-        <MarqueeRow images={ROW_2} direction="right" speed={50} />
+        <MarqueeRow images={ROW_1} direction="left" speed={45} onImageClick={setSelectedImage} />
+        <MarqueeRow images={ROW_2} direction="right" speed={50} onImageClick={setSelectedImage} />
       </div>
 
-      <div className="mt-14 text-center">
+      <div className="mt-14 text-center relative z-10">
         <CTAButton href="/gallery" variant="outline">
           View Full Gallery
         </CTAButton>
       </div>
+
+      {/* Lightbox Overlay */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-4 backdrop-blur-md transition-opacity duration-300"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="absolute top-6 right-6 z-[110] rounded-full bg-white/10 p-2 text-white transition-colors duration-300 hover:bg-forge-red"
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedImage(null);
+            }}
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <div
+            className="relative h-[85vh] w-full max-w-6xl overflow-hidden rounded-xl border border-white/10 shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              fill
+              className="object-contain"
+              sizes="100vw"
+            />
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 pt-10 pb-6 text-center text-white">
+              <span className="mb-2 inline-block rounded bg-forge-red px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                {selectedImage.category}
+              </span>
+              <p className="text-lg font-semibold tracking-wide drop-shadow-md">{selectedImage.alt}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

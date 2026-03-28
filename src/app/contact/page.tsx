@@ -26,7 +26,7 @@ function PageHero() {
       <div className="absolute top-10 right-16 h-2 w-2 rounded-full bg-forge-red/30" />
       <div className="absolute bottom-16 left-16 h-2 w-2 rounded-full bg-forge-red/30" />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8 pt-20 md:pt-24">
         {/* Tagline */}
         <div className="mb-6 flex items-center justify-center gap-3 opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]">
           <span className="h-px w-10 bg-forge-red" />
@@ -85,7 +85,8 @@ function ContactContentSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Message sent! We'll get back to you shortly.");
+    const body = `Name: ${formData.name}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\n\n${formData.message}`;
+    window.location.href = `mailto:${CONTACT_INFO.email}?subject=Contact Form Submission: ${formData.subject}&body=${encodeURIComponent(body)}`;
   };
 
   const inputStyles =
@@ -182,14 +183,12 @@ function ContactContentSection() {
               </div>
 
               {/* Submit */}
-              <CTAButton
-                variant="primary"
-                size="lg"
-                className="w-full"
-                onClick={() => {}}
+              <button
+                type="submit"
+                className="w-full rounded bg-forge-red px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-forge-white transition-all duration-300 hover:bg-forge-red/90 hover:shadow-lg hover:shadow-forge-red/25"
               >
                 Send Message
-              </CTAButton>
+              </button>
             </form>
           </div>
 
@@ -310,7 +309,7 @@ function ContactContentSection() {
                     WhatsApp
                   </h3>
                   <a
-                    href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
+                    href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=${encodeURIComponent(CONTACT_INFO.whatsappMessage || "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-1 inline-block text-sm text-forge-gray-400 transition-colors hover:text-forge-red"
@@ -451,7 +450,7 @@ function ContactCTA() {
             Call Us Now
           </CTAButton>
           <CTAButton
-            href={`https://wa.me/${CONTACT_INFO.whatsapp}`}
+            href={`https://wa.me/${CONTACT_INFO.whatsapp}?text=${encodeURIComponent(CONTACT_INFO.whatsappMessage || "")}`}
             variant="outline"
             size="lg"
           >

@@ -23,16 +23,18 @@ export default function TrainersPreviewSection() {
         <div
           ref={ref}
           className={cn(
-            "grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 transition-all duration-700",
+            "flex flex-wrap justify-center gap-6 transition-all duration-700",
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           )}
         >
-          {previewTrainers.map((trainer) => (
-            <TrainerCard key={trainer.name} {...trainer} />
+          {previewTrainers.map((trainer, index) => (
+            <div key={`${trainer.name}-${index}`} className="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
+              <TrainerCard {...trainer} />
+            </div>
           ))}
-        </div>
+          </div>
 
         <div className="mt-12 text-center">
           <CTAButton href="/trainers" variant="outline">

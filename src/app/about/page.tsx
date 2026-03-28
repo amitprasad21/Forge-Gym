@@ -24,7 +24,7 @@ function PageHero() {
       <div className="absolute top-10 right-16 h-2 w-2 rounded-full bg-forge-red/30" />
       <div className="absolute bottom-16 left-16 h-2 w-2 rounded-full bg-forge-red/30" />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 text-center sm:px-6 lg:px-8 pt-20 md:pt-24">
         {/* Tagline */}
         <div className="mb-6 flex items-center justify-center gap-3 opacity-0 animate-[fadeUp_0.6s_ease-out_forwards]">
           <span className="h-px w-10 bg-forge-red" />
@@ -88,31 +88,31 @@ function OurStorySection() {
 
             <div className="space-y-5 text-base leading-relaxed text-forge-gray-400">
               <p>
-                The Forge was born in 2016 from a simple belief: that the right
+                The Forge was born in early 2026 from a simple belief: that the right
                 environment can unlock potential most people never knew they had.
-                Our founders -- former competitive athletes and certified
-                strength coaches -- grew frustrated with cookie-cutter gyms that
-                treated fitness as an afterthought. They envisioned a space
+                Our founder Jeet Singh -- a former competitive athlete and certified
+                strength coach -- grew frustrated with cookie-cutter gyms that
+                treated fitness as an afterthought. He envisioned a space
                 where serious training met genuine community, and every detail
                 was designed to help people become the strongest version of
                 themselves.
               </p>
 
               <p>
-                What started as a 3,000-square-foot warehouse with second-hand
-                barbells has grown into a world-class training facility spanning
-                over 20,000 square feet of purpose-built space. But the soul of
-                The Forge has never changed. Walk through our doors and you
-                will feel it instantly -- the energy of people pushing past
-                limits, the camaraderie of a team that refuses to let anyone
-                give up, and the unmistakable sound of iron meeting iron.
+                What began as a dream quickly became a 10,000-square-foot
+                purpose-built training facility in Greater Noida, packed with
+                competition-grade Rogue and Hammer Strength equipment. Walk
+                through our doors and you will feel it instantly -- the energy
+                of people pushing past limits, the camaraderie of a team that
+                refuses to let anyone give up, and the unmistakable sound of
+                iron meeting iron.
               </p>
 
               <p>
-                Today, The Forge is home to over ten thousand members -- from
-                first-time lifters learning the fundamentals to elite athletes
-                chasing podiums. No matter where you start, this is where you
-                are forged.
+                Today, The Forge is already home to a growing community of
+                dedicated members -- from first-time lifters learning the
+                fundamentals to seasoned athletes chasing new personal records.
+                No matter where you start, this is where you are forged.
               </p>
             </div>
           </div>
@@ -150,7 +150,7 @@ function OurStorySection() {
                   </svg>
                 </div>
                 <p className="mt-4 text-xs font-bold uppercase tracking-[0.25em] text-forge-gray-500">
-                  Est. 2016
+                  Est. January 2026
                 </p>
                 <p className="mt-1 text-sm font-medium uppercase tracking-widest text-forge-gray-500">
                   The Forge Gym
@@ -363,9 +363,9 @@ function OurValuesSection() {
 /*  5. STATS / NUMBERS SECTION                                        */
 /* ------------------------------------------------------------------ */
 const stats = [
-  { value: "10,000+", label: "Members Trained" },
+  { value: "500+", label: "Members & Growing" },
   { value: "15+", label: "Expert Trainers" },
-  { value: "8+", label: "Years Strong" },
+  { value: "10K+", label: "Sq Ft Facility" },
   { value: "50+", label: "Weekly Classes" },
 ];
 

@@ -12,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "The Forge Gym | Train Hard. Transform Faster.",
+  title: "THE FORGE GYM",
   description:
     "The Forge Gym — where iron meets determination. Premium strength training, personal coaching, and group fitness. Built for those who refuse to settle.",
   keywords: [
@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     "workout",
     "The Forge Gym",
   ],
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -31,8 +34,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="bg-forge-black text-forge-white font-body antialiased">
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <body className="bg-forge-black text-forge-white font-body antialiased" suppressHydrationWarning>
         <Navbar />
         <main>{children}</main>
         <Footer />
