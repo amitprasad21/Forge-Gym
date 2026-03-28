@@ -193,15 +193,15 @@ export const TRAINERS = [
   {
     name: "Yash Rathod",
     role: "Head Strength Coach",
-    bio: "Passionate about transformations, Yash has helped hundreds of clients achieve goals they never thought possible. His holistic approach covers training, nutrition, and mindset.",
+    bio: "Passionate about building strength from the ground up, Yash brings a holistic approach to every client — covering training, nutrition, and mindset to help you hit goals you never thought possible.",
     specialties: ["Powerlifting", "Strength", "Athletic Performance"],
     image: "/images/trainers/gymm.png",
     certifications: ["NSCA-CSCS", "USAW Level 2"],
   },
   {
-    name: "Yash Rathod",
-    role: "Personal Training Director",
-    bio: "With a background in sports science and extensive years in fitness, Yash designs high-intensity programs that deliver measurable results fast.",
+    name: "Jeet Singh",
+    role: "Founder & Personal Training Director",
+    bio: "With a background in sports science and a lifelong obsession with fitness, Jeet founded The Forge to build the gym he always wished existed. He designs high-intensity programs that deliver real, measurable results.",
     specialties: ["HIIT", "Fat Loss", "Metabolic Conditioning"],
     image: "/images/trainers/gym_g1.png",
     certifications: ["ACE-CPT", "Precision Nutrition L1"],
@@ -312,7 +312,7 @@ export const CONTACT_INFO = {
   email: "Jeetutk750@gmail.com",
   whatsapp: "917017799025",
   hours: [
-    { day: "Monday - Saturday", time: "6:00 AM - 10:00 PM" },
+    { day: "Monday - Saturday", time: "5:00 AM - 11:00 PM" },
     { day: "Sunday", time: "Closed" },
   ],
   socials: {
@@ -321,7 +321,7 @@ export const CONTACT_INFO = {
     threads: "https://www.threads.com/@yashfit_0?xmt=AQF0hyESdN9LcfGIORuilcE4BjWQkExBKGU3Zdao3smUkSc",
   },
   owner: "Jeet Singh",
-  whatsappMessage: "Hello! I came across your wonderful website and I'm interested in joining the gym. Could you share some details with me? Thanks!",
+  whatsappMessage: "Hi! I'm interested in joining The Forge. Can you tell me about your membership plans?",
 };
 
 export const WHY_CHOOSE_US = [
@@ -340,7 +340,7 @@ export const WHY_CHOOSE_US = [
   {
     title: "Proven Results",
     description:
-      "Hundreds of successful body transformations achieved rapidly since our launch in January 2026.",
+      "Real transformations happening every week since our launch in January 2026. Our members' results speak for themselves.",
     icon: "trending-up",
   },
   {
