@@ -265,7 +265,7 @@ export const GALLERY_IMAGES = [
     category: "training",
   },
   {
-    src: "/images/gallery/gym-interior - Copy.jpeg",
+    src: "/images/gallery/gym-interior.jpeg",
     alt: "Gym interior wide shot",
     category: "facility",
   },
