@@ -158,7 +158,7 @@ export default function BMICalculatorSection() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-forge-gray-400">Your BMI</p>
-                    <p className="mt-1 text-4xl font-black text-white">{bmi}</p>
+                    <p className="mt-1 text-3xl font-black text-white sm:text-4xl">{bmi}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-sm text-forge-gray-400">Category</p>
@@ -176,7 +176,7 @@ export default function BMICalculatorSection() {
                       style={{ width: `${category.pct}%` }}
                     />
                   </div>
-                  <div className="mt-2 flex justify-between text-[10px] uppercase tracking-wider text-forge-gray-500">
+                  <div className="mt-2 hidden justify-between text-[10px] uppercase tracking-wider text-forge-gray-500 sm:flex">
                     <span>Underweight</span>
                     <span>Normal</span>
                     <span>Overweight</span>
@@ -185,7 +185,7 @@ export default function BMICalculatorSection() {
                 </div>
 
                 {/* Ranges */}
-                <div className="mt-5 grid grid-cols-4 gap-2 text-center text-xs">
+                <div className="mt-5 grid grid-cols-2 gap-2 text-center text-xs sm:grid-cols-4">
                   <div className={`rounded-md py-2 ${bmi < 18.5 ? "bg-blue-400/20 text-blue-400" : "bg-white/5 text-forge-gray-500"}`}>
                     &lt;18.5
                   </div>
