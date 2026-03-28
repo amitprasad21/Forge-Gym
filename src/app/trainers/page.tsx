@@ -85,7 +85,7 @@ function TrainersGridSection() {
         <div
           ref={ref}
           className={cn(
-            "grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 transition-all duration-700",
+            "flex flex-wrap justify-center gap-8 transition-all duration-700",
             isVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -94,7 +94,7 @@ function TrainersGridSection() {
           {TRAINERS.map((trainer, index) => (
             <div
               key={`${trainer.name}-${index}`}
-              className="transition-all duration-500"
+              className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)] transition-all duration-500"
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <TrainerCard

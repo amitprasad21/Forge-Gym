@@ -1,4 +1,5 @@
 import HeroSection from "@/components/sections/hero-section";
+import BMICalculatorSection from "@/components/sections/bmi-calculator-section";
 import HighlightsSection from "@/components/sections/highlights-section";
 import AboutPreviewSection from "@/components/sections/about-preview-section";
 import ProgramsPreviewSection from "@/components/sections/programs-preview-section";
@@ -14,6 +15,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <BMICalculatorSection />
       <HighlightsSection />
       <AboutPreviewSection />
       <ProgramsPreviewSection />
