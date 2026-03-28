@@ -18,7 +18,7 @@ export const HERO_DATA = {
   athleteImage: "/images/hero/hero-athlete.jpg",
   stats: [
     { value: "100+", label: "Members & Growing" },
-    { value: "2", label: "Expert Trainers" },
+    { value: "1", label: "Expert Trainer" },
     { value: "3+", label: "Weekly Sessions" },
     { value: "2026", label: "Est. March" },
   ],
@@ -197,14 +197,6 @@ export const TRAINERS = [
     specialties: ["Powerlifting", "Strength", "Athletic Performance"],
     image: "/images/trainers/gymm.png",
     certifications: ["NSCA-CSCS", "USAW Level 2"],
-  },
-  {
-    name: "Jeet Singh",
-    role: "Founder & Personal Training Director",
-    bio: "With a background in sports science and a lifelong obsession with fitness, Jeet founded The Forge to build the gym he always wished existed. He designs high-intensity programs that deliver real, measurable results.",
-    specialties: ["HIIT", "Fat Loss", "Metabolic Conditioning"],
-    image: "/images/trainers/gym_g1.png",
-    certifications: ["ACE-CPT", "Precision Nutrition L1"],
   },
 ];
 

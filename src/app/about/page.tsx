@@ -91,12 +91,12 @@ function OurStorySection() {
               <p>
                 The Forge was born in early 2026 from a simple belief: that the right
                 environment can unlock potential most people never knew they had.
-                Our founder Jeet Singh -- a former competitive athlete and certified
-                strength coach -- grew frustrated with cookie-cutter gyms that
-                treated fitness as an afterthought. He envisioned a space
-                where serious training met genuine community, and every detail
-                was designed to help people become the strongest version of
-                themselves.
+                Our founder and owner, Jeet Singh -- a passionate fitness
+                enthusiast and entrepreneur -- grew frustrated with cookie-cutter
+                gyms that treated fitness as an afterthought. He envisioned a
+                space where serious training met genuine community, and every
+                detail was designed to help people become the strongest version
+                of themselves.
               </p>
 
               <p>
@@ -366,7 +366,7 @@ function OurValuesSection() {
 /* ------------------------------------------------------------------ */
 const stats = [
   { value: "100+", label: "Members & Growing" },
-  { value: "2", label: "Expert Trainers" },
+  { value: "1", label: "Expert Trainer" },
   { value: "10K+", label: "Sq Ft Facility" },
   { value: "3+", label: "Weekly Sessions" },
 ];
