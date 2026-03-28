@@ -38,7 +38,7 @@ function PageHero() {
 
         {/* Title */}
         <h1
-          className="text-5xl font-black uppercase leading-[0.95] text-white opacity-0 animate-[fadeUp_0.6s_ease-out_forwards] md:text-6xl lg:text-7xl xl:text-8xl"
+          className="text-4xl font-black uppercase leading-[0.95] text-white opacity-0 animate-[fadeUp_0.6s_ease-out_forwards] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
           style={{ animationDelay: "0.15s" }}
         >
           CONTACT
@@ -412,7 +412,7 @@ function MapSection() {
           <div className="overflow-hidden rounded-xl border-2 border-forge-gray-800">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.5!2d77.4901!3d28.4744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cc1e1e1e1e1e1%3A0x1234567890abcdef!2sZeta+I%2C+Greater+Noida%2C+Uttar+Pradesh+201310!5e0!3m2!1sen!2sin"
-              className="h-[400px] w-full md:h-[500px]"
+              className="h-[280px] w-full sm:h-[400px] md:h-[500px]"
               style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
               allowFullScreen
               loading="lazy"
