@@ -329,9 +329,10 @@ export const CONTACT_INFO = {
     { day: "Sunday", time: "Closed" },
   ],
   socials: {
-    instagram: "https://www.instagram.com/yashfit_0/",
-    facebook: "https://www.facebook.com/yashh.rathod.1/",
-    threads: "https://www.threads.com/@yashfit_0?xmt=AQF0hyESdN9LcfGIORuilcE4BjWQkExBKGU3Zdao3smUkSc",
+    instagram: "https://www.instagram.com/jeetsinghfitness/?hl=en",
+    threads:
+      "https://www.threads.com/@jeetsinghfitness?xmt=AQF0mcra72CnA1fYCNKEtiQ-V3J0Em6HgEDIk5pI0iDz4hU",
+    youtube: "https://www.youtube.com/channel/UCMwm00-DZGOZm5x5rhOoWog",
   },
   owner: "Jeet Singh",
   whatsappMessage: "Hi! I'm interested in joining The Forge. Can you tell me about your membership plans?",
