@@ -195,7 +195,7 @@ export const TRAINERS = [
     role: "Head Strength Coach",
     bio: "Passionate about building strength from the ground up, Yash brings a holistic approach to every client — covering training, nutrition, and mindset to help you hit goals you never thought possible.",
     specialties: ["Powerlifting", "Strength", "Athletic Performance"],
-    image: "/images/trainers/gymm.png",
+    image: "/images/trainers/gym_g1.png",
     certifications: ["NSCA-CSCS", "USAW Level 2"],
   },
 ];
