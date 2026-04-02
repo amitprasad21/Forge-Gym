@@ -104,6 +104,7 @@ function TrainersGridSection() {
                 specialties={trainer.specialties}
                 image={trainer.image}
                 certifications={trainer.certifications}
+                socials={trainer.socials}
               />
             </div>
           ))}

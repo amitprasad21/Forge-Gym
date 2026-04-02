@@ -197,8 +197,29 @@ export const TRAINERS = [
     specialties: ["Powerlifting", "Strength", "Athletic Performance"],
     image: "/images/trainers/gym_g1.png",
     certifications: ["NSCA-CSCS", "USAW Level 2"],
+    socials: {
+      instagram: "https://www.instagram.com/yashfit_0/",
+      facebook: "https://www.facebook.com/yashh.rathod.1/",
+      threads:
+        "https://www.threads.com/@yashfit_0?xmt=AQF0hyESdN9LcfGIORuilcE4BjWQkExBKGU3Zdao3smUkSc",
+    },
   },
 ];
+
+export const FOUNDER_INFO = {
+  name: "Jeet Singh",
+  role: "Founder & Owner",
+  phone: "7017799025",
+  whatsapp: "917017799025",
+  bio: "A passionate fitness enthusiast and entrepreneur, Jeet Singh founded The Forge with a singular vision — to build a training ground where serious athletes and everyday lifters alike can push past their limits. With a deep commitment to quality equipment, expert coaching, and an unbreakable community, Jeet has created more than a gym — he has built a movement that transforms lives from the inside out.",
+  image: "/images/owner/jt.png",
+  socials: {
+    instagram: "https://www.instagram.com/jeetsinghfitness/?hl=en",
+    threads:
+      "https://www.threads.com/@jeetsinghfitness?xmt=AQF0mcra72CnA1fYCNKEtiQ-V3J0Em6HgEDIk5pI0iDz4hU",
+    youtube: "https://www.youtube.com/channel/UCMwm00-DZGOZm5x5rhOoWog",
+  },
+};
 
 export const TESTIMONIALS = [
   {
