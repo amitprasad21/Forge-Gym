@@ -71,7 +71,7 @@ function getBotReply(userText: string): { text: string; showPlans?: boolean } {
 
   // Trainer / coach
   if (/trainer|coach|instructor|staff/.test(text)) {
-    return { text: "We have 1 expert trainer:\nYash Rathod - Head Strength Coach\n\nThe gym is owned and founded by Jeet Singh." };
+    return { text: "We have 2 expert trainers:\n1. Jeet Singh - Founder & Head Trainer\n2. Yash Rathod - Head Strength Coach" };
   }
 
   // Programs / workouts

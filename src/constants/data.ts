@@ -18,7 +18,7 @@ export const HERO_DATA = {
   athleteImage: "/images/hero/hero-athlete.jpg",
   stats: [
     { value: "100+", label: "Members & Growing" },
-    { value: "1", label: "Expert Trainer" },
+    { value: "2", label: "Expert Trainers" },
     { value: "3+", label: "Weekly Sessions" },
     { value: "2026", label: "Est. March" },
   ],
@@ -190,6 +190,19 @@ export const MEMBERSHIP_PLANS = [
 ];
 
 export const TRAINERS = [
+  {
+    name: "Jeet Singh",
+    role: "Founder & Head Trainer",
+    bio: "A passionate fitness enthusiast and entrepreneur, Jeet Singh founded The Forge with a singular vision — to build a training ground where serious athletes and everyday lifters alike can push past their limits.",
+    specialties: ["Functional Training", "Body Transformation", "Strength & Conditioning"],
+    image: "/images/owner/jt.png",
+    certifications: ["Certified Personal Trainer", "Nutrition Specialist"],
+    socials: {
+      instagram: "https://www.instagram.com/jeetsinghfitness/?hl=en",
+      threads:
+        "https://www.threads.com/@jeetsinghfitness?xmt=AQF0mcra72CnA1fYCNKEtiQ-V3J0Em6HgEDIk5pI0iDz4hU",
+    },
+  },
   {
     name: "Yash Rathod",
     role: "Head Strength Coach",
