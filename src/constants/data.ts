@@ -18,7 +18,7 @@ export const HERO_DATA = {
   athleteImage: "/images/hero/hero-athlete.jpg",
   stats: [
     { value: "100+", label: "Members & Growing" },
-    { value: "1", label: "Expert Trainer" },
+    { value: "2", label: "Expert Trainers" },
     { value: "3+", label: "Weekly Sessions" },
     { value: "2026", label: "Est. March" },
   ],
@@ -191,12 +191,31 @@ export const MEMBERSHIP_PLANS = [
 
 export const TRAINERS = [
   {
+    name: "Jeet Singh",
+    role: "Founder & Head Trainer",
+    bio: "A passionate fitness enthusiast and entrepreneur, Jeet Singh founded The Forge with a singular vision — to build a training ground where serious athletes and everyday lifters alike can push past their limits.",
+    specialties: ["Functional Training", "Body Transformation", "Strength & Conditioning"],
+    image: "/images/owner/jt.png",
+    certifications: ["Certified Personal Trainer", "Nutrition Specialist"],
+    socials: {
+      instagram: "https://www.instagram.com/jeetsinghfitness/?hl=en",
+      threads:
+        "https://www.threads.com/@jeetsinghfitness?xmt=AQF0mcra72CnA1fYCNKEtiQ-V3J0Em6HgEDIk5pI0iDz4hU",
+    },
+  },
+  {
     name: "Yash Rathod",
     role: "Head Strength Coach",
     bio: "Passionate about building strength from the ground up, Yash brings a holistic approach to every client — covering training, nutrition, and mindset to help you hit goals you never thought possible.",
     specialties: ["Powerlifting", "Strength", "Athletic Performance"],
-    image: "/images/trainers/gymm.png",
+    image: "/images/trainers/gym_g1.png",
     certifications: ["NSCA-CSCS", "USAW Level 2"],
+    socials: {
+      instagram: "https://www.instagram.com/yashfit_0/",
+      facebook: "https://www.facebook.com/yashh.rathod.1/",
+      threads:
+        "https://www.threads.com/@yashfit_0?xmt=AQF0hyESdN9LcfGIORuilcE4BjWQkExBKGU3Zdao3smUkSc",
+    },
   },
   {
     name: "Jeet Singh",
@@ -207,6 +226,21 @@ export const TRAINERS = [
     certifications: ["ACE-CPT", "Precision Nutrition L1"],
   },
 ];
+
+export const FOUNDER_INFO = {
+  name: "Jeet Singh",
+  role: "Founder & Owner",
+  phone: "7017799025",
+  whatsapp: "917017799025",
+  bio: "A passionate fitness enthusiast and entrepreneur, Jeet Singh founded The Forge with a singular vision — to build a training ground where serious athletes and everyday lifters alike can push past their limits. With a deep commitment to quality equipment, expert coaching, and an unbreakable community, Jeet has created more than a gym — he has built a movement that transforms lives from the inside out.",
+  image: "/images/owner/jt.png",
+  socials: {
+    instagram: "https://www.instagram.com/jeetsinghfitness/?hl=en",
+    threads:
+      "https://www.threads.com/@jeetsinghfitness?xmt=AQF0mcra72CnA1fYCNKEtiQ-V3J0Em6HgEDIk5pI0iDz4hU",
+    youtube: "https://www.youtube.com/channel/UCMwm00-DZGOZm5x5rhOoWog",
+  },
+};
 
 export const TESTIMONIALS = [
   {
@@ -316,9 +350,10 @@ export const CONTACT_INFO = {
     { day: "Sunday", time: "Closed" },
   ],
   socials: {
-    instagram: "https://www.instagram.com/yashfit_0/",
-    facebook: "https://www.facebook.com/yashh.rathod.1/",
-    threads: "https://www.threads.com/@yashfit_0?xmt=AQF0hyESdN9LcfGIORuilcE4BjWQkExBKGU3Zdao3smUkSc",
+    instagram: "https://www.instagram.com/jeetsinghfitness/?hl=en",
+    threads:
+      "https://www.threads.com/@jeetsinghfitness?xmt=AQF0mcra72CnA1fYCNKEtiQ-V3J0Em6HgEDIk5pI0iDz4hU",
+    youtube: "https://www.youtube.com/channel/UCMwm00-DZGOZm5x5rhOoWog",
   },
   owner: "Jeet Singh",
   whatsappMessage: "Hi! I'm interested in joining The Forge. Can you tell me about your membership plans?",
