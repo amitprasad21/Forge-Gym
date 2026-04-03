@@ -49,7 +49,7 @@ export default function TrainerCard({
           <h3 className="mt-1 text-xl font-bold text-white">{name}</h3>
 
           {/* Expandable on hover */}
-          <div className="mt-0 max-h-0 overflow-hidden opacity-0 transition-all duration-500 group-hover:mt-3 group-hover:max-h-60 group-hover:opacity-100">
+          <div className="mt-0 max-h-0 overflow-hidden opacity-0 transition-all duration-500 group-hover:mt-3 group-hover:max-h-96 group-hover:opacity-100">
             <p className="text-sm leading-relaxed text-forge-gray-400">
               {bio}
             </p>
