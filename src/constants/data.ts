@@ -64,7 +64,7 @@ export const ABOUT_PREVIEW = {
     "Established in March 2026, The Forge was built with one purpose: to create an environment where serious training happens. No gimmicks, no shortcuts — just raw dedication, expert coaching, and the tools you need to transform.",
   image: "/images/gallery/gym-floor.jpg",
   features: [
-    "10,000+ sq ft training floor",
+    "3,000+ sq ft training floor",
     "Competition-grade equipment",
     "Dedicated strength zones",
     "Recovery & stretching area",
